@@ -32,6 +32,21 @@ The environment variables below are all optional, the values you see are the def
 
 You can also find tags that reference a commit or version number.
 
+## Configuration
+
+You can use a configuration file that should be stored in `/config/app/unpackerr.conf` or/and use the docker environment variables. Take a look at the upstream project page for more info.
+
+```shell
+-e UN_SONARR_0_URL="http://sonarr:8989"
+-e UN_SONARR_0_API_KEY="<yourapikey>"
+-e UN_SONARR_0_PATH="/downloads"
+-e UN_RADARR_0_URL="http://radarr:7878"
+-e UN_RADARR_0_API_KEY="<yourapikey>"
+-e UN_RADARR_0_PATH="/downloads"
+-e UN_LIDARR_0_URL="http://lidarr:8686"
+-e UN_LIDARR_0_API_KEY="<yourapikey>"
+```
+
 ## Executing your own scripts
 
 If you have a need to do additional stuff when the container starts or stops, you can mount your script with `-v /docker/host/my-script.sh:/etc/cont-init.d/99-my-script` to execute your script on container start or `-v /docker/host/my-script.sh:/etc/cont-finish.d/99-my-script` to execute it when the container stops. An example script can be seen below.
