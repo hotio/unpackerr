@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+umask "${UMASK}"
+
+if [[ -f "${CONFIG_DIR}/app/unpackerr.conf" ]]; then
+    cp -f "${CONFIG_DIR}/app/unpackerr.conf" /etc/unpackerr/unpackerr.conf
+fi
