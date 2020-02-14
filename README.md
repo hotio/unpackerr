@@ -10,7 +10,7 @@
 Just the basics to get the container running:
 
 ```shell
-docker run --rm --name unpackerr -v /<host_folder_config>:/config -v /<host_folder_downloads>:/downloads hotio/unpackerr
+docker run --rm --name unpackerr -v /<host_folder_config>:/config hotio/unpackerr
 ```
 
 The environment variables below are all optional, the values you see are the defaults.
