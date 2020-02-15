@@ -4,5 +4,8 @@
 umask "${UMASK}"
 
 if [[ -f "${CONFIG_DIR}/app/unpackerr.conf" ]]; then
+    echo "Copying custom \"unpackerr.conf\"..."
     cp -f "${CONFIG_DIR}/app/unpackerr.conf" /etc/unpackerr/unpackerr.conf
+else
+    echo "No custom \"unpackerr.conf\" found. Using defaults."
 fi
