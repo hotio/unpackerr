@@ -2,7 +2,7 @@ FROM hotio/base@sha256:ae471f9d08cf51928f92ed403a1d571fd3fc24f2771d58403e9963ef8
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-ARG UNPACKERR_VERSION=0.7.0-beta2
+ARG UNPACKERR_VERSION=0.7.0-beta3
 
 # install app
 RUN gzfile="/tmp/unpackerr.gz" && curl -fsSL -o "${gzfile}" "https://github.com/davidnewhall/unpackerr/releases/download/v${UNPACKERR_VERSION}/unpackerr.amd64.linux.gz" && gunzip -c "${gzfile}" | dd of="${APP_DIR}/unpackerr" && chmod 755 "${APP_DIR}/unpackerr" && rm "${gzfile}"
