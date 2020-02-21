@@ -21,6 +21,7 @@ The environment variables below are all optional, the values you see are the def
 -e UMASK=002
 -e TZ="Etc/UTC"
 -e ARGS=""
+-e DEBUG="no"
 ```
 
 ## Tags
@@ -34,7 +35,7 @@ You can also find tags that reference a commit or version number.
 
 ## Configuration
 
-You can use a configuration file that should be stored in `/config/app/unpackerr.conf` or/and use the docker environment variables. Take a look at the upstream project page for more info.
+You can use a configuration file that should be stored in `/config/app/unpackerr.conf` or/and use the docker environment variables. Take a look at the upstream project page for more info. Also don't forget to mount your volumes where Unpackerr should look to find your downloads.
 
 ```shell
 -e UN_SONARR_0_URL="http://sonarr:8989"
