@@ -10,7 +10,7 @@ RUN git clone -n https://github.com/davidnewhall/unpackerr.git . && \
     git checkout ${UNPACKERR_VERSION} && \
     CGO_ENABLED=0 make ${BINARY}.armhf.linux
 
-FROM hotio/base@sha256:039214e09dba0974ad79ac56e166b943503c09179a4743865928392addcb1f2a
+FROM hotio/base@sha256:8598d7707dd3e8471cf80df6a471a1f100f207ca5f1e33b08e6b0a64d961e3dd
 
 ARG DEBIAN_FRONTEND="noninteractive"
 

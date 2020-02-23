@@ -10,7 +10,7 @@ RUN git clone -n https://github.com/davidnewhall/unpackerr.git . && \
     git checkout ${UNPACKERR_VERSION} && \
     CGO_ENABLED=0 make ${BINARY}.arm64.linux
 
-FROM hotio/base@sha256:039214e09dba0974ad79ac56e166b943503c09179a4743865928392addcb1f2a
+FROM hotio/base@sha256:0f5f319c48b975be04c4c420bf8adaf187129179c21e9f3d6cd623794982d169
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
