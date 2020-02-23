@@ -1,4 +1,4 @@
-FROM hotio/base@sha256:039214e09dba0974ad79ac56e166b943503c09179a4743865928392addcb1f2a
+FROM golang:stretch as builder
 ARG BINARY=unpackerr
 
 RUN mkdir -p $GOPATH/pkg/mod $GOPATH/bin $GOPATH/src /${BINARY}
