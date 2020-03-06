@@ -2,7 +2,7 @@
 # shellcheck shell=bash
 
 umask "${UMASK}"
-DEBUG="yes"
+
 redirect_cmd() {
     if [[ "${DEBUG}" == "yes" ]]; then
         "$@"
