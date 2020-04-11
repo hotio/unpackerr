@@ -4,7 +4,7 @@ ARG BINARY=unpackerr
 RUN mkdir -p $GOPATH/pkg/mod $GOPATH/bin $GOPATH/src /${BINARY}
 WORKDIR /${BINARY}
 
-ARG UNPACKERR_VERSION=de11d983c278a68b60011d3925f9fdea1e694ab5
+ARG UNPACKERR_VERSION
 
 RUN git clone -n https://github.com/davidnewhall/unpackerr.git . && \
     git checkout ${UNPACKERR_VERSION} -b hotio && \
