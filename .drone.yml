@@ -40,6 +40,8 @@ steps:
     dockerfile: ${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}.Dockerfile
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+    build_args:
+      - UNPACKERR_VERSION=${UNPACKERR_VERSION=0.7.0}
 
 depends_on:
   - checks
@@ -97,6 +99,8 @@ steps:
     dockerfile: ${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}.Dockerfile
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+    build_args:
+      - UNPACKERR_VERSION=${UNPACKERR_VERSION=0.7.0}
 
 depends_on:
   - checks
@@ -154,6 +158,8 @@ steps:
     dockerfile: ${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}.Dockerfile
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+    build_args:
+      - UNPACKERR_VERSION=${UNPACKERR_VERSION=0.7.0}
 
 depends_on:
   - checks
@@ -257,7 +263,7 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    target: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${TAG_VERSION=0.7.0}
+    target: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${UNPACKERR_VERSION=0.7.0}
     template: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-OS-ARCH
     platforms:
       - linux/amd64
@@ -289,7 +295,7 @@ steps:
       from_secret: discord_id
     DISCORD_TOKEN:
       from_secret: discord_token
-    VERSION_FIELD: ${TAG_VERSION=0.7.0}
+    VERSION_FIELD: ${UNPACKERR_VERSION=0.7.0}
   commands:
     - curl -fsSL https://gist.githubusercontent.com/hotio/d490b6447ddde9634475ddacbc85d8c1/raw/discord-build-notify.sh > discord-build-notify.sh
     - bash discord-build-notify.sh
