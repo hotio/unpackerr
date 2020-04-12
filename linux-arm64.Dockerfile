@@ -13,6 +13,6 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 # install app
 COPY --from=builder /unpackerr/unpackerr.arm64.linux ${APP_DIR}/unpackerr
-RUN chmod -R u=rwX,go=rX "${APP_DIR}" && chmod 755 "${APP_DIR}/unpackerr"
+RUN chmod 755 "${APP_DIR}/unpackerr"
 
 COPY root/ /
