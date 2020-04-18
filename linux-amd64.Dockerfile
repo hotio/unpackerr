@@ -7,7 +7,7 @@ RUN git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd 
     COMMIT_DATE=$(date -u --date=@$(git show -s --format=%ct ${UNPACKERR_VERSION}) +'%Y-%m-%dT%H:%M:%SZ') && sed -i "s/DATE=.*/DATE=${COMMIT_DATE}/g" .metadata.sh && \
     CGO_ENABLED=0 make unpackerr.amd64.linux
 
-FROM hotio/base@sha256:75b16518487eb5cf1b65f55132938dbee7f954d82b8c13d4b0175780ada14ff7
+FROM hotio/base@sha256:29d40ed2eecd505d6f6c2c460f732ee5fa2a20d87d17aacdd50a9d6e098b0afe
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
