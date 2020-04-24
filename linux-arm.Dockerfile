@@ -7,7 +7,7 @@ RUN git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd 
     COMMIT_DATE=$(date -u --date=@$(git show -s --format=%ct ${UNPACKERR_VERSION}) +'%Y-%m-%dT%H:%M:%SZ') && sed -i "s/DATE=.*/DATE=${COMMIT_DATE}/g" .metadata.sh && \
     CGO_ENABLED=0 make unpackerr.armhf.linux
 
-FROM hotio/base@sha256:9c7833cc31199260454fff82e03c29eea7211ae2bb128b3ba4b620c0d5c2b018
+FROM hotio/base@sha256:303b7670596f63e071bc6cbad20d2d5ae7e75933477f1f7e648ff63eab80a053
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
