@@ -39,15 +39,14 @@ You can also find tags that reference a commit or version number.
 
 ## Configuration
 
-You can use a configuration file that should be stored in `/config/app/unpackerr.conf` or/and use the docker environment variables. Take a look at the upstream project page for more info. Also don't forget to mount your volumes where Unpackerr should look to find your downloads.
+You can use docker environment variables or a configuration file that should be stored in `/config/app/unpackerr.conf`. Don't forget to mount your volume where Unpackerr should look to find your downloads. You should use the same volume as is used in the Sonarr/Radarr/Lidarr containers. More advanced configuration methods are possible too, but take a look at the [upstream](https://github.com/davidnewhall/unpackerr) project page for more info on that.
 
 ```shell
+-v /<host_folder_downloads>:/downloads
 -e UN_SONARR_0_URL="http://sonarr:8989"
 -e UN_SONARR_0_API_KEY="<yourapikey>"
--e UN_SONARR_0_PATH="/downloads"
 -e UN_RADARR_0_URL="http://radarr:7878"
 -e UN_RADARR_0_API_KEY="<yourapikey>"
--e UN_RADARR_0_PATH="/downloads"
 -e UN_LIDARR_0_URL="http://lidarr:8686"
 -e UN_LIDARR_0_API_KEY="<yourapikey>"
 ```
