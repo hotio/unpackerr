@@ -30,11 +30,11 @@ The environment variables below are all optional, the values you see are the def
 
 ## Tags
 
-| Tag              | Upstream                      |
-| -----------------|-------------------------------|
-| release (latest) | GitHub releases               |
-| testing          | GitHub pre-releases           |
-| nightly          | Every commit to master branch |
+| Tag                | Upstream                      |
+| -------------------|-------------------------------|
+| `release` (latest) | GitHub releases               |
+| `testing`          | GitHub pre-releases           |
+| `nightly`          | Every commit to master branch |
 
 You can also find tags that reference a commit or version number.
 
