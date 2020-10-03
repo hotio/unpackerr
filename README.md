@@ -13,20 +13,27 @@
 
 Just the basics to get the container running:
 
-```shell
-docker run --rm --name unpackerr -v /<host_folder_config>:/config hotio/unpackerr
+```shell hl_lines="3 4 5 6 7 8"
+docker run --rm \
+    --name unpackerr \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e UMASK=002 \
+    -e TZ="Etc/UTC" \
+    -e ARGS="" \
+    -e DEBUG="no" \
+    -e UN_SONARR_0_URL="http://sonarr:8989" \
+    -e UN_SONARR_0_API_KEY="<yourapikey>" \
+    -e UN_RADARR_0_URL="http://radarr:7878" \
+    -e UN_RADARR_0_API_KEY="<yourapikey>" \
+    -e UN_LIDARR_0_URL="http://lidarr:8686" \
+    -e UN_LIDARR_0_API_KEY="<yourapikey>" \
+    -v /<host_folder_config>:/config \
+    -v /<host_folder_downloads>:/downloads \
+    hotio/unpackerr
 ```
 
-The environment variables below are all optional, the values you see are the defaults.
-
-```shell
--e PUID=1000
--e PGID=1000
--e UMASK=002
--e TZ="Etc/UTC"
--e ARGS=""
--e DEBUG="no"
-```
+The [highlighted](https://hotio.dev/containers/unpackerr) variables are all optional, the values you see are the defaults.
 
 ## Tags
 
@@ -41,16 +48,6 @@ You can also find tags that reference a commit or version number.
 ## Configuration
 
 You can use docker environment variables or a configuration file that should be stored in `/config/app/unpackerr.conf`. Don't forget to mount your volume where Unpackerr should look to find your downloads. You should use the same volume as is used in the Sonarr/Radarr/Lidarr containers. More advanced configuration methods are possible too, but take a look at the [upstream](https://github.com/davidnewhall/unpackerr) project page for more info on that.
-
-```shell
--v /<host_folder_downloads>:/downloads
--e UN_SONARR_0_URL="http://sonarr:8989"
--e UN_SONARR_0_API_KEY="<yourapikey>"
--e UN_RADARR_0_URL="http://radarr:7878"
--e UN_RADARR_0_API_KEY="<yourapikey>"
--e UN_LIDARR_0_URL="http://lidarr:8686"
--e UN_LIDARR_0_API_KEY="<yourapikey>"
-```
 
 ## Executing your own scripts
 
