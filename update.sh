@@ -17,6 +17,8 @@ elif [[ ${1} == "tests" ]]; then
 else
     version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/davidnewhall/unpackerr/releases/latest" | jq -r .tag_name | sed s/v//g)
     [[ -z ${version} ]] && exit 1
-    echo '{"version":"'"${version}"'"}' | jq . > VERSION.json
-    echo "##[set-output name=version;]${version}"
+    old_version=$(jq -r '.version' < VERSION.json)
+    changelog=$(jq -r '.changelog' < VERSION.json)
+    [[ "${old_version}" != "${version}" ]] && changelog="https://github.com/davidnewhall/compare/v${old_version}...v${version}"
+    echo '{"version":"'"${version}"'","changelog":"'"${changelog}"'"}' | jq . > VERSION.json
 fi
