@@ -19,6 +19,6 @@ else
     [[ -z ${version} ]] && exit 1
     old_version=$(jq -r '.version' < VERSION.json)
     changelog=$(jq -r '.changelog' < VERSION.json)
-    [[ "${old_version}" != "${version}" ]] && changelog="https://github.com/davidnewhall/compare/v${old_version}...v${version}"
+    [[ "${old_version}" != "${version}" ]] && changelog="https://github.com/davidnewhall/unpackerr/compare/v${old_version}...v${version}"
     echo '{"version":"'"${version}"'","changelog":"'"${changelog}"'"}' | jq . > VERSION.json
 fi
