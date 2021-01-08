@@ -1,8 +1,10 @@
-FROM golang:stretch as builder
+FROM golang:latest as builder
 
 ARG VERSION
 
-RUN git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
+RUN apt update && \
+    apt install -y upx && \
+    git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
     git checkout ${VERSION} -b hotio && \
     COMMIT_DATE=$(date -u --date=@$(git show -s --format=%ct ${VERSION}) +'%Y-%m-%dT%H:%M:%SZ') && sed -i "s/DATE=.*/DATE=${COMMIT_DATE}/g" .metadata.sh && \
     CGO_ENABLED=0 make unpackerr.armhf.linux
