@@ -6,7 +6,7 @@ RUN apt update && \
     apt install -y upx && \
     git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
     git checkout ${VERSION} -b hotio && \
-    COMMIT_DATE=$(date -u --date=@$(git show -s --format=%ct ${VERSION}) +'%Y-%m-%dT%H:%M:%SZ') && sed -i "s/DATE=.*/DATE=${COMMIT_DATE}/g" ./.metadata.sh && \
+    COMMIT_DATE=$(date -u --date=@$(git show -s --format=%ct ${VERSION}) +'%Y-%m-%dT%H:%M:%SZ') && sed -i "s/DATE=.*/DATE=${COMMIT_DATE}/g" "${PWD}/.metadata.sh" && \
     CGO_ENABLED=0 make unpackerr.amd64.linux
 
 FROM hotio/base@sha256:e4b441eeb9faf8ab5fee10395a92f4965ae1945bd427af6049e48c5b47a475e9
