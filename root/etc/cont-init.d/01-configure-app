@@ -3,9 +3,7 @@
 
 umask "${UMASK}"
 
-if [[ -f "${CONFIG_DIR}/app/unpackerr.conf" ]]; then
-    echo "Copying custom \"unpackerr.conf\"..."
-    cp -f "${CONFIG_DIR}/app/unpackerr.conf" /etc/unpackerr/unpackerr.conf
-else
-    echo "No custom \"unpackerr.conf\" found. Using defaults."
+if [[ ! -f "${CONFIG_DIR}/app/unpackerr.conf" ]]; then
+    cp "${APP_DIR}/unpackerr.conf" "${CONFIG_DIR}/app/unpackerr.conf"
+    chown hotio:hotio "${CONFIG_DIR}/app/unpackerr.conf"
 fi
