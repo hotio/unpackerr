@@ -3,4 +3,4 @@
 
 umask "${UMASK}"
 
-exec s6-setuidgid hotio "${APP_DIR}/unpackerr" -c "${CONFIG_DIR}/app/unpackerr.conf"
+exec s6-setuidgid hotio "${APP_DIR}/unpackerr" -c "${CONFIG_DIR}/unpackerr.conf"
