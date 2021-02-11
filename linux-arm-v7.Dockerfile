@@ -1,7 +1,5 @@
 FROM golang:latest as builder
 
-RUN apt update && apt install -y upx
-
 ARG VERSION
 
 RUN git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
