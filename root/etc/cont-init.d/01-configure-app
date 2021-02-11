@@ -4,6 +4,6 @@
 umask "${UMASK}"
 
 if [[ ! -f "${CONFIG_DIR}/app/unpackerr.conf" ]]; then
-    cp "${APP_DIR}/unpackerr.conf" "${CONFIG_DIR}/app/unpackerr.conf"
+    cp "${APP_DIR}/unpackerr.conf.example" "${CONFIG_DIR}/app/unpackerr.conf"
     chown hotio:hotio "${CONFIG_DIR}/app/unpackerr.conf"
 fi
