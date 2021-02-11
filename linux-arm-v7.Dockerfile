@@ -1,8 +1,8 @@
-FROM golang:latest as builder
+FROM golang:alpine as builder
 
 ARG VERSION
-WORKDIR /unpackerr
-RUN git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
+RUN apk add --no-cache git build-base bash && \
+    git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
     git checkout ${VERSION} -b hotio && \
     CGO_ENABLED=0 make unpackerr.armhf.linux
 
