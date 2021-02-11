@@ -1,7 +1,7 @@
 FROM golang:latest as builder
 
 ARG VERSION
-
+WORKDIR /unpackerr
 RUN git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
     git checkout ${VERSION} -b hotio && \
     CGO_ENABLED=0 make unpackerr.arm64.linux
