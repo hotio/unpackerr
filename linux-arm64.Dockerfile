@@ -6,7 +6,7 @@ RUN apk add --no-cache git build-base bash && \
     git checkout v${VERSION} -b hotio && \
     CGO_ENABLED=0 make unpackerr.arm64.linux
 
-FROM hotio/base@sha256:fc660a53878523289966e0c154de17d7c393cd7c33f2773a3f4db92765083286
+FROM hotio/base@sha256:71bf3c2326f7d42082546c972dc3eb2c338a2a9811272a35e8f56f319b40014d
 COPY --from=builder /unpackerr/unpackerr.arm64.linux ${APP_DIR}/unpackerr
 COPY --from=builder /unpackerr/examples/unpackerr.conf.example ${APP_DIR}/unpackerr.conf.example
 RUN chmod 755 "${APP_DIR}/unpackerr"
