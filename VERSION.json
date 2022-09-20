@@ -1,4 +1,5 @@
 {
+  "description": "Every commit to master",
   "version": "bad18a3080396ea3d00af59994b4a0cf2322619a",
   "changelog": "https://github.com/davidnewhall/unpackerr/compare/268721f2f94a79921868cc0d4b5122505b4839cb...bad18a3080396ea3d00af59994b4a0cf2322619a",
   "upstream_image": "cr.hotio.dev/hotio/base",
