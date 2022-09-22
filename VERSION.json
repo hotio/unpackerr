@@ -1,4 +1,5 @@
 {
+  "latest": true,
   "description": "Releases",
   "version": "0.10.1",
   "changelog": "https://github.com/davidnewhall/unpackerr/compare/v0.10.0...v0.10.1",
