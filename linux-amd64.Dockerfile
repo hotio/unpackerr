@@ -5,7 +5,7 @@ FROM golang:alpine as builder
 
 ARG VERSION
 RUN apk add --no-cache git build-base bash && \
-    git clone -n https://github.com/davidnewhall/unpackerr.git /unpackerr && cd /unpackerr && \
+    git clone -n https://github.com/unpackerr/unpackerr.git /unpackerr && cd /unpackerr && \
     git checkout v${VERSION} -b hotio && \
     CGO_ENABLED=0 make unpackerr.amd64.linux
 
