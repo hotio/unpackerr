@@ -30,3 +30,8 @@ fi
 echo "Applying permissions to ${CONFIG_DIR}"
 chmod "=rwx" "${CONFIG_DIR}"
 chown hotio:hotio "${CONFIG_DIR}"
+
+if [[ ! -f "${CONFIG_DIR}/unpackerr.conf" ]]; then
+    cp "${APP_DIR}/unpackerr.conf.example" "${CONFIG_DIR}/unpackerr.conf"
+    chown hotio:hotio "${CONFIG_DIR}/unpackerr.conf"
+fi
