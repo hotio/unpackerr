@@ -1,9 +1,0 @@
-#!/command/with-contenv bash
-# shellcheck shell=bash
-
-umask "${UMASK}"
-
-if [[ ! -f "${CONFIG_DIR}/unpackerr.conf" ]]; then
-    cp "${APP_DIR}/unpackerr.conf.example" "${CONFIG_DIR}/unpackerr.conf"
-    chown hotio:hotio "${CONFIG_DIR}/unpackerr.conf"
-fi
