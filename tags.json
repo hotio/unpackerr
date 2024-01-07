@@ -1,12 +1,12 @@
 {
   "nightly": {
     "description": "Every commit to master",
-    "last_updated": "2023-12-01T02:19:20.295Z",
+    "last_updated": "2024-01-07T05:48:40.770Z",
     "latest": false,
     "tags": [
       "nightly",
       "nightly-4eff86bc39797114b2c3512574396a06904c56f5",
-      "nightly-4d15bfc"
+      "nightly-856aa1d"
     ]
   },
   "release": {
