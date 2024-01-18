@@ -1,7 +1,7 @@
 {
   "description": "Every commit to master",
-  "version": "27cc615196aa930f53e039763bd5d897e94f626b",
-  "changelog": "https://github.com/unpackerr/unpackerr/compare/24230b67ab82f256ee83b9c483b01ea61ce7920a...27cc615196aa930f53e039763bd5d897e94f626b",
+  "version": "4a84ba8d63f150993bcecd06f861a22537b83bfb",
+  "changelog": "https://github.com/unpackerr/unpackerr/compare/27cc615196aa930f53e039763bd5d897e94f626b...4a84ba8d63f150993bcecd06f861a22537b83bfb",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpine",
   "upstream_digest_amd64": "sha256:aba1ad70d73a01a04940ceefcc0506c8867aa99be1e1598f7f57d79dc462ba1d",
