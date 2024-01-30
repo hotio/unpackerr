@@ -1,7 +1,7 @@
 {
   "description": "Every commit to master",
-  "version": "1454e57703c93c4715aa4149bc30dd708220981b",
-  "changelog": "https://github.com/unpackerr/unpackerr/compare/3da7307724d87545c8183002f0e5d67f7617912e...1454e57703c93c4715aa4149bc30dd708220981b",
+  "version": "8bc7cac576a766d0819c695d09a603c351ccebc4",
+  "changelog": "https://github.com/unpackerr/unpackerr/compare/1454e57703c93c4715aa4149bc30dd708220981b...8bc7cac576a766d0819c695d09a603c351ccebc4",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpinevpn",
   "upstream_digest_amd64": "sha256:a55e205512f89e7851be453c57d4b580a454c0378b8cc7a91244b9b60892a988",
