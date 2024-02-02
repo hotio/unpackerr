@@ -11,6 +11,8 @@ RUN apk add --no-cache git build-base bash && \
 
 
 FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_AMD64}
+ARG IMAGE_STATS
+ENV IMAGE_STATS=${IMAGE_STATS}
 
 COPY --from=builder /unpackerr/unpackerr.amd64.linux ${APP_DIR}/unpackerr
 COPY --from=builder /unpackerr/examples/unpackerr.conf.example ${APP_DIR}/unpackerr.conf.example
