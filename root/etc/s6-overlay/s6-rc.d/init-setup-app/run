@@ -13,5 +13,5 @@ ENVIRONMENT APP
 
 if [[ ! -f "${CONFIG_DIR}/unpackerr.conf" ]]; then
     cp "${APP_DIR}/unpackerr.conf.example" "${CONFIG_DIR}/unpackerr.conf"
-    chown hotio:hotio "${CONFIG_DIR}/unpackerr.conf"
+    find "${CONFIG_DIR}/unpackerr.conf" -maxdepth 0 \( ! -user hotio -or ! -group hotio \) -exec chown hotio:hotio {} +
 fi
