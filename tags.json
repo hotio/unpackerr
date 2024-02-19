@@ -14,13 +14,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2024-02-19T07:31:33.000Z",
-    "last_updated_url": "https://github.com/hotio/unpackerr/actions/runs/7955918428",
+    "last_updated": "2024-02-19T09:11:25.000Z",
+    "last_updated_url": "https://github.com/hotio/unpackerr/actions/runs/7956957663",
     "latest": true,
     "tags": [
       "release",
       "release-0.13.1",
-      "release-7429b68"
+      "release-44d3b3b"
     ]
   },
   "testing": {
