@@ -26,13 +26,13 @@
   "testing": {
     "description": "Pre-releases",
     "hide": false,
-    "last_updated": "2024-02-24T18:36:23.000Z",
-    "last_updated_url": "https://github.com/hotio/unpackerr/actions/runs/8032400949",
+    "last_updated": "2024-02-25T19:28:57.000Z",
+    "last_updated_url": "https://github.com/hotio/unpackerr/actions/runs/8040208480",
     "latest": false,
     "tags": [
       "testing",
       "testing-0.13.1",
-      "testing-6d8db47"
+      "testing-e98db1c"
     ]
   }
 }
