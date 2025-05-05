@@ -2,13 +2,13 @@
   "nightly": {
     "description": "Every commit to master",
     "hide": false,
-    "last_updated": "2025-04-30T05:29:23.000Z",
-    "last_updated_url": "https://github.com/hotio/unpackerr/actions/runs/14747298417",
+    "last_updated": "2025-05-05T09:32:09.000Z",
+    "last_updated_url": "https://github.com/hotio/unpackerr/actions/runs/14833271434",
     "latest": false,
     "tags": [
       "nightly",
       "nightly-1b830500d18707e639f56d6d0d17cf059f74feca",
-      "nightly-afc55a2"
+      "nightly-18dc322"
     ]
   },
   "release": {
