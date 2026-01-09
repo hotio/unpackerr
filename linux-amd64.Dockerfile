@@ -1,5 +1,5 @@
 ARG UPSTREAM_IMAGE
-ARG UPSTREAM_DIGEST_AMD64
+ARG UPSTREAM_TAG_SHA
 
 FROM golang:alpine as builder
 
@@ -10,7 +10,7 @@ RUN apk add --no-cache git build-base bash && \
     CGO_ENABLED=0 make unpackerr.amd64.linux
 
 
-FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_AMD64}
+FROM ${UPSTREAM_IMAGE}:${UPSTREAM_TAG_SHA}
 ARG IMAGE_STATS
 ENV IMAGE_STATS=${IMAGE_STATS}
 
