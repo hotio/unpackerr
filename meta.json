@@ -2,6 +2,6 @@
   "description": "Every commit to master",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpinevpn",
-  "upstream_tag_sha": "alpinevpn-f3c5595",
+  "upstream_tag_sha": "alpinevpn-9fa1971",
   "version": "d6fdf16efdfc29fd22543ba74c8aad6f2d06ee59"
 }
