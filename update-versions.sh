@@ -1,8 +1,0 @@
-#!/bin/bash
-set -exuo pipefail
-
-version=$(curl -fsSL --header "Authorization: Bearer ${GITHUB_TOKEN}" "https://api.github.com/repos/unpackerr/unpackerr/commits/main" | jq -re .sha)
-json=$(cat meta.json)
-jq --sort-keys \
-    --arg version "${version//v/}" \
-    '.version = $version' <<< "${json}" | tee meta.json
