@@ -1,7 +1,9 @@
+# syntax=docker/dockerfile:1
+# check=skip=InvalidDefaultArgInFrom
 ARG UPSTREAM_IMAGE
 ARG UPSTREAM_TAG_SHA
 
-FROM golang:alpine as builder
+FROM golang:alpine AS builder
 
 ARG VERSION
 RUN apk add --no-cache git build-base bash && \
